@@ -26,7 +26,7 @@ requirements:
     - matplotlib-base
     - numpy
     - pandas
-    - panel >=0.10.1
+    - panel >=0.11.0
     - param
     - pbr  # [( py<38 )]
     - pytorch
