@@ -1,5 +1,5 @@
 {% set name = "pyhdx" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/PyHDX-{{ version }}.tar.gz
-  sha256: a018d79ab37f552f46bfb87f04d0316899a07a2d6205298eea0f461e1b1e53db
+  sha256: 2307a57630d91875bfa94c482a7557e1fb182372f1e613951774282654e9b27a
 
 build:
   number: 0
