@@ -14,35 +14,37 @@ build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
-requirements:
-  host:
-    - pip
-    - python >=3.7
-  run:
-    - python >=3.7
-    - hdxrate >=0.2.0
-    - numpy
-    - matplotlib-base
-    - pandas
-    - scikit-image
-    - scipy
-    - symfit
-    - pytorch
-    - tqdm
-    - dask
-    - distributed
-    - packaging
 
-test:
-  imports:
-    - pyhdx
-  commands:
-    - pip check
-  requires:
-    - pip
+
+
 
 outputs:
   - name: pyhdx-base
+    requirements:
+      host:
+        - pip
+        - python >=3.7
+      run:
+        - python >=3.7
+        - hdxrate >=0.2.0
+        - numpy
+        - matplotlib-base
+        - pandas
+        - scikit-image
+        - scipy
+        - symfit
+        - pytorch
+        - tqdm
+        - dask
+        - distributed
+        - packaging
+      test:
+        imports:
+          - pyhdx
+        commands:
+          - pip check
+        requires:
+          - pip
 
 #  - name: pyhdx
 #    requirements:
