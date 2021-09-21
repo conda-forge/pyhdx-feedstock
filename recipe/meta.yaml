@@ -45,7 +45,7 @@ about:
   home: https://github.com/Jhsmit/PyHDX
   license: MIT
   license_family: MIT
-  license_file: LICENSE
+  license_file: LICENSE.txt
   summary: Derive ΔG for single residues from HDX-MS data
   doc_url: https://pyhdx.readthedocs.io/
   dev_url: https://github.com/Jhsmit/PyHDX
