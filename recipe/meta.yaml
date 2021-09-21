@@ -26,7 +26,7 @@ requirements:
     - scikit-image
     - scipy
     - symfit
-    - torch
+    - pytorch
     - tqdm
     - dask
     - distributed
