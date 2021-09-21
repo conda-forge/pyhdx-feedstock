@@ -3,7 +3,7 @@
 
 
 package:
-  name: {{ name|lower }}
+  name: pyhdx-suite
   version: {{ version }}
 
 source:
@@ -13,10 +13,6 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
-
-
-
-
 
 outputs:
   - name: pyhdx-base
@@ -38,29 +34,13 @@ outputs:
         - dask
         - distributed
         - packaging
-      test:
-        imports:
-          - pyhdx
-        commands:
-          - pip check
-        requires:
-          - pip
-
-#  - name: pyhdx
-#    requirements:
-#      run:
-#       - panel>=0.11.0
-#       - bokeh
-#       - param
-#       - lumen==0.3.0
-#       - holoviews
-#       - colorcet
-#       - hvplot
-#       - pylatex
-#       - proplot==0.6.4
-#    test:
-#      imports:
-#        - pyhdx
+    test:
+      imports:
+        - pyhdx
+      commands:
+        - pip check
+      requires:
+        - pip
 
 about:
   home: https://github.com/Jhsmit/PyHDX
