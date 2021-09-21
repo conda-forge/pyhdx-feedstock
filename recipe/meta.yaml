@@ -18,6 +18,8 @@ outputs:
     build:
       script: "{{ PYTHON }} -m pip install . -vv"
     requirements:
+      build:
+        - python >=3.7
       host:
         - pip
         - python >=3.7
