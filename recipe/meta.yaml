@@ -19,7 +19,7 @@ requirements:
     - pip
     - python
   run:
-    - hdxrate>=0.2.0
+    - hdxrate >=0.2.0
     - numpy
     - matplotlib-base
     - pandas
