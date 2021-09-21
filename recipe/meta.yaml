@@ -43,21 +43,21 @@ test:
 outputs:
   - name: pyhdx-base
 
-  - name: pyhdx
-    requirements:
-      run:
-       - panel>=0.11.0
-       - bokeh
-       - param
-       - lumen==0.3.0
-       - holoviews
-       - colorcet
-       - hvplot
-       - pylatex
-       - proplot==0.6.4
-    test:
-      imports:
-        - pyhdx
+#  - name: pyhdx
+#    requirements:
+#      run:
+#       - panel>=0.11.0
+#       - bokeh
+#       - param
+#       - lumen==0.3.0
+#       - holoviews
+#       - colorcet
+#       - hvplot
+#       - pylatex
+#       - proplot==0.6.4
+#    test:
+#      imports:
+#        - pyhdx
 
 about:
   home: https://github.com/Jhsmit/PyHDX
