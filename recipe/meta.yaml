@@ -3,7 +3,7 @@
 
 
 package:
-  name: pyhdx-suite
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
@@ -12,38 +12,32 @@ source:
 
 build:
   number: 0
-
-outputs:
-  - name: pyhdx-base
-    build:
-      script: "{{ PYTHON }} -m pip install . -vv"
-    requirements:
-      build:
-        - python >=3.7
-      host:
-        - pip
-        - python >=3.7
-      run:
-        - python >=3.7
-        - hdxrate >=0.2.0
-        - numpy
-        - matplotlib-base
-        - pandas
-        - scikit-image
-        - scipy
-        - symfit
-        - pytorch
-        - tqdm
-        - dask
-        - distributed
-        - packaging
-    test:
-      imports:
-        - pyhdx
-      commands:
-        - pip check
-      requires:
-        - pip
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  requirements:
+    host:
+      - pip
+      - python >=3.7
+    run:
+      - python >=3.7
+      - hdxrate >=0.2.0
+      - numpy
+      - matplotlib-base
+      - pandas
+      - scikit-image
+      - scipy
+      - symfit
+      - pytorch
+      - tqdm
+      - dask
+      - distributed
+      - packaging
+  test:
+    imports:
+      - pyhdx
+    commands:
+      - pip check
+    requires:
+      - pip
 
 about:
   home: https://github.com/Jhsmit/PyHDX
