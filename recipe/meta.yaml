@@ -1,5 +1,5 @@
 {% set name = "pyhdx" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0b6" %}
 
 
 package:
@@ -8,34 +8,32 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/PyHDX-{{ version }}.tar.gz
-  sha256: a5d58947ab9dacb5da8c4619d225bdab5ddad5aae673b497688c5b7210c2c809
+  sha256: cc72dc8afdf2b392c8a28d6a358f50c417398dc5e28af249e8e9af8b7d1c6a8d
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
-
+  noarch: python
+  entry_points:
+    - pyhdx = pyhdx.cli:main
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 requirements:
   host:
-    - pbr
     - pip
-    - python
+    - python >=3.7
   run:
-    - bokeh
-    - dask
+    - python >=3.7
     - hdxrate >=0.2.0
-    - matplotlib-base
     - numpy
+    - matplotlib-base
     - pandas
-    - panel >=0.10.1
-    - param
-    - pbr  # [( py<38 )]
-    - pytorch
-    - python
     - scikit-image
     - scipy
     - symfit
+    - pytorch
     - tqdm
-
+    - dask
+    - distributed
+    - packaging
 test:
   imports:
     - pyhdx
@@ -48,7 +46,7 @@ about:
   home: https://github.com/Jhsmit/PyHDX
   license: MIT
   license_family: MIT
-  license_file: LICENSE
+  license_file: LICENSE.txt
   summary: Derive ΔG for single residues from HDX-MS data
   doc_url: https://pyhdx.readthedocs.io/
   dev_url: https://github.com/Jhsmit/PyHDX
