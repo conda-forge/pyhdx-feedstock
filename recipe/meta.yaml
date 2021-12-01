@@ -13,7 +13,8 @@ source:
 build:
   number: 0
   noarch: python
-  entry_points: pyhdx = pyhdx.cli:main
+  entry_points:
+    - pyhdx = pyhdx.cli:main
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 requirements:
   host:
