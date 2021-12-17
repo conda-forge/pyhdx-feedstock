@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/PyHDX-{{ version }}.tar.gz
-  sha256: 077ef8df58b146488bbb184b5d41b6b9774543f1ff555f835e0ea86725456cd6
+  sha256: 76e40bdc1bb2e958c6878fff295704837df1cce86911fda19c866541858a38c4
 
 build:
   number: 0
