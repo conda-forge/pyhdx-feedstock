@@ -1,5 +1,5 @@
 {% set name = "pyhdx" %}
-{% set version = "0.4.0b7" %}
+{% set version = "0.4.0b8" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/PyHDX-{{ version }}.tar.gz
-  sha256: 76e40bdc1bb2e958c6878fff295704837df1cce86911fda19c866541858a38c4
+  sha256: ef584c5d4b7c5b4069d9566ad4cd93b72c8e9ad280e52b7c68d028cabc3f6e90
 
 build:
   number: 0
@@ -19,16 +19,17 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
   run:
-    - python >=3.7
+    - python >=3.8
     - hdxrate >=0.2.0
     - numpy
-    - matplotlib-base
+    - matplotlib-base==3.4.3
     - pandas
     - scikit-image
     - scipy
     - symfit
+    - sympy ==1.5.1
     - pytorch
     - tqdm
     - dask
