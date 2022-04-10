@@ -28,8 +28,7 @@ requirements:
     - pandas
     - scikit-image
     - scipy
-    - symfit
-    - sympy ==1.5.1
+    - symfit >=0.5.5
     - pytorch
     - tqdm
     - dask
