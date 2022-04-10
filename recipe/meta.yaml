@@ -1,5 +1,5 @@
 {% set name = "pyhdx" %}
-{% set version = "0.4.0b8" %}
+{% set version = "0.4.0b9" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/PyHDX-{{ version }}.tar.gz
-  sha256: ef584c5d4b7c5b4069d9566ad4cd93b72c8e9ad280e52b7c68d028cabc3f6e90
+  sha256: 8cbc7e5f26885a94cd59475d798321d48417de41f2d0a4184bddda2db4c63726
 
 build:
   number: 0
@@ -28,8 +28,9 @@ requirements:
     - pandas
     - scikit-image
     - scipy
-    - symfit
-    - sympy ==1.5.1
+    - symfit >=0.5.5
+    - typer
+    - param
     - pytorch
     - tqdm
     - dask
