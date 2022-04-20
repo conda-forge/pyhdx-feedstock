@@ -1,5 +1,5 @@
 {% set name = "pyhdx" %}
-{% set version = "0.4.0b9" %}
+{% set version = "0.4.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/PyHDX-{{ version }}.tar.gz
-  sha256: 8cbc7e5f26885a94cd59475d798321d48417de41f2d0a4184bddda2db4c63726
+  sha256: e07aa06cd7df4f5cc619153e6166924bd5f5a37663e86dce32262aa715df2fd8
 
 build:
   number: 0
@@ -24,7 +24,7 @@ requirements:
     - python >=3.8
     - hdxrate >=0.2.0
     - numpy
-    - matplotlib-base ==3.4.3
+    - matplotlib-base==3.4.3
     - pandas
     - scikit-image
     - scipy
@@ -33,9 +33,20 @@ requirements:
     - param
     - pytorch
     - tqdm
+    - typer
     - dask
     - distributed
+    - param
     - packaging
+    - panel >=0.13.0
+    - bokeh
+    - holoviews
+    - colorcet >= 3.0.0
+    - hvplot
+    - proplot ==0.9.3
+    - pyyaml
+
+
 test:
   imports:
     - pyhdx
