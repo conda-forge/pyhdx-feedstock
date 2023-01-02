@@ -32,6 +32,7 @@ requirements:
     - typer
     - param
     - pytorch
+    - omegaconf >=2.2.2
     - tqdm
     - typer
     - dask
