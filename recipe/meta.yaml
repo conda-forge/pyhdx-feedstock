@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/PyHDX-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/PyHDX-{{ version }}.tar.gz
   sha256: 51384c52006a4d70f6b8aab9a9ab5ee0bef7870d497da74176244431333aaea9
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - pyhdx = pyhdx.cli:main
@@ -19,9 +19,9 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - hdxrate >=0.2.0
     - numpy
     - matplotlib-base ==3.4.3
@@ -55,6 +55,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/Jhsmit/PyHDX
