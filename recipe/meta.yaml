@@ -1,5 +1,5 @@
 {% set name = "pyhdx" %}
-{% set version = "0.4.2" %}
+{% set version = "0.4.5" %}
 
 
 package:
@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/PyHDX-{{ version }}.tar.gz
-  sha256: 51384c52006a4d70f6b8aab9a9ab5ee0bef7870d497da74176244431333aaea9
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 248b1c80bcc2fff26208c3c1c89f91763d4745cfe81d560444c2b7676cc6e020
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - pyhdx = pyhdx.cli:main
